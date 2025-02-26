@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CCD9FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    width: 700px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* SIGN IN */
+.login > .sign-in {
+    background: #5764BE;
+    border-radius: 20px 25% 25% 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.login > .sign-up {
+    background: #FFFFFF;
+    /* border: .1px solid #5764BE; */
+    border-radius: 0px 20px 20px 0px;
+    padding: 5px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > .sign-in > h1 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.login > .sign-in > p {
+    color: #fff;
+    font-size: 13px;
+}
+
+.login > .sign-in > button {
+    background: #fff;
+    color: #5764BE;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* SIGN UP */
+
+.login > .sign-up > h1 {
+    color: #5764BE;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.login > .sign-up > .social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.login > .sign-up > .social-media > .btn-social {
+    background: #5764BE;
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login > .sign-up > .social-media > .btn-social:hover {
+    color: #5f0303;
+    background: #000;
+}
+
+
+.login > .sign-up > .social-media > p {
+    color: #6e6e6e;
+    font-size: 13px;
+    margin: 20px;
+}
+.login > .sign-up > .social-media > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.login > .sign-up > .social-media > form > input {
+    padding: 10px 20px 10px 20px;
+    border: none;
+    background: #ececec;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.login > .sign-up > .social-media > form > button {
+    width: 50%;
+    background: #5764BE;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.login > .sign-up > .social-media > form > button:hover {
+}
+
+.sign-up > div > form > button > .btn-social {
+}
