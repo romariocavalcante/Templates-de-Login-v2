@@ -15,10 +15,9 @@ body {
 
 .login {
     width: 700px;
-    height: 420px;
+    min-height: 420px;
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -34,6 +33,10 @@ body {
     gap: 10px;
     padding: 30px;
     text-align: center;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .login > .sign-up {
@@ -45,6 +48,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 1.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .login > .sign-in > h1 {
@@ -69,25 +75,30 @@ body {
 
 /* SIGN UP */
 
-.login > .sign-up > h1 {
+.login > .sign-up > .h1-sign-up, .h1-sign-in {
     color: #5764BE;
     font-size: 30px;
     margin-bottom: 15px;
+    transition: all 1.5s ease-in-out;
 }
 .login > .sign-up > .social-media {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2px;
+    justify-content: center;
+    gap: 5px;
 }
 .login > .sign-up > .social-media > .btn-social {
     background: #5764BE;
     color: #fff;
     border: none;
-    padding: 5px 5px;
+    padding: 5px 10px;
     margin: 2px;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .login > .sign-up > .social-media > .btn-social:hover {
     color: #5f0303;
@@ -129,8 +140,31 @@ body {
     margin: 5px;
 }
 
-.login > .sign-up > .social-media > form > button:hover {
+.none {
+    display: none !important;
 }
 
-.sign-up > div > form > button > .btn-social {
+/* Transitions */
+.sign-in.move-right {
+    transform: translateX(100%);
+    border-radius: 25% 20px 20px 25%;
+}
+
+.sign-up.move-left {
+    transform: translateX(-100%);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.login.transitioning {
+    background: linear-gradient(90deg, #CCD9FC 0%, #FFFFFF 50%, #CCD9FC 100%);
+    transition: background 0.1s ease-in-out;
+}
+
+.h1-sign-up, .h1-sign-in {
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+}
+
+.login.transitioning .h1-sign-up, .login.transitioning .h1-sign-in {
+    opacity: 0;
 }
